@@ -1,11 +1,7 @@
 def guess_number(guess)
-  $number||= get_number
-  puts check_number($number, guess)
-  play unless $number == guess
-end
-
-def get_number
-  rand(10)
+  @number||= rand(10)
+  puts check_number(@number, guess)
+  play unless @number == guess
 end
 
 def check_number(number, guess)
